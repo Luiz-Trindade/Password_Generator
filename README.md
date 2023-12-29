@@ -4,8 +4,6 @@
 
 <image src="screenshot1.png">
 
-# Simple Password Generator Written In Python!
-
 This Python program, created by Luiz Gabriel Magalhães Trindade, 
 serves as a straightforward yet effective password generator. 
 Distributed under the GPL3 License, you can find 
