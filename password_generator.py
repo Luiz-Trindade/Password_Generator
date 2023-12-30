@@ -3,16 +3,14 @@
 # Distributed Under The GPL3 License.
 # GPL3 License: https://www.gnu.org/licenses/gpl-3.0.en.html#license-text
 
-from random import choice
+import secrets, string
 from customtkinter import *
 from pyperclip import copy
 
 def Main():
     def Generate_Password():
-        chars = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ1234567890!@#$%&*_"
-        password = ""
-        for i in range(password_size):
-            password += choice(chars)
+        chars = string.ascii_letters+string.digits+string.punctuation
+        password = "".join(secrets.choice(chars) for i in range(password_size))
         password_label.configure(text=password)
         copy(password)
 
